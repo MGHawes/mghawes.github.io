@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<div class="container">
+<div class="home">
+  <div class="matt">
+  <div class="row">
+    <div class="top-background-panel">
+      <div class="col-md-6">
+        <h1>Matt</h1>
+      </div>
+      <div class="col-md-6">
+        <img src="{{ site.url }}/assets/Images/MGH.jpg" class="img-responsive img-circle profile-img" alt="Matt's Face">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>About Me</h2>
+      <p>
+        I grew up in the sleepy flatlands of Buckinghamshire longing for somewhere more mountainous.
+        I then completed my Maths and Physics Masters in Oxford, which is arguably even flatter!
+        I'm currently working as an Intern for Softwire West, living in Clifton trying to learn as much as possible about software development as well as German. After my internship I am moving to Munich to start my PhD in Theoetical Physics.
+      </p>
+    </div>
+  </div>
+  </div>
+  <h1 class="page-heading">Posts</h1>
+  
+  {{ content }}
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>
+</div>

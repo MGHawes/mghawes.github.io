@@ -1,0 +1,61 @@
+.matt {
+
+  $lightbg: rgb(250, 237, 237);
+  $deepblue: rgb(65, 87, 115);
+  $titlefont: 'Open Sans', sans-serif;
+  $bodyfont: 'Roboto', sans-serif;
+  $xs-size:767px;
+
+
+  .top-background-panel {
+    background-color: $lightbg;
+    overflow: auto;
+    vertical-align: middle;
+  }
+
+  h1 {
+    color: $deepblue;
+    text-align: center;
+    font-family: $titlefont;
+    font-weight: lighter;
+  }
+
+  @media screen and (max-width: $xs-size) {
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  @media screen and (min-width: $xs-size) {
+    h1 {
+      font-size: 125px;
+    }
+  }
+
+  h2 {
+    font-family: $titlefont;
+    color: $deepblue;
+    font-size: 36px;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+  }
+
+  .profile-img {
+    margin: 20px;
+    width: 90%;
+  }
+
+  .tiles {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+
+  p {
+    text-align: justify;
+    font-family: $bodyfont;
+    font-size: 1em;
+    margin: 0px 10px 0px 10px;
+  }
+}
