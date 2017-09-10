@@ -91,15 +91,8 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
   text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-
   &:hover {
-    color: $text-color;
     text-decoration: underline;
   }
 
@@ -117,7 +110,7 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
+  color: $dark-blue;
   border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
@@ -200,16 +193,29 @@ pre {
   vertical-align: middle;
 
   path {
-    fill: $grey-color;
+    fill: $dark-blue;
   }
 }
 
-.social-media-list {
-  .icon {
-    padding-right: 5px;
+.invert-icon {
+  a {
+    display: block;
   }
+  svg {
+    @extend .icon;
 
-  li + li {
-    padding-top: 5px;
+    path {
+      fill: #ffffff;
+    }
   }
 }
+  .social-media-list {
+    .icon {
+      padding-right: 5px;
+    }
+
+    li + li {
+      padding-top: 5px;
+    }
+  }
+
