@@ -2,13 +2,14 @@
  * Site header
  */
 .site-header {
-   border-top: 5px solid $dark-blue;
-   background-color: $dark-blue;
-
-   // Positioning context for the mobile navigation icon
-   position: relative;
+  border-top: 5px solid $dark-blue;
+  background-color: $dark-blue;
+  position: relative;
   z-index: 1000000; /* highest z-index on page */
- }
+  a:hover {
+    color: #ffffff;
+  }
+}
 
 .splash-banner {
   min-height: 300px;
@@ -18,7 +19,7 @@
   z-index: 0;
 }
 
-.intro-line{
+.intro-line {
   text-align: center;
   margin: auto;
   color: #a1a1a1;
@@ -39,16 +40,33 @@
   float: right;
 }
 
-.banner-right{
+.logo-col {
+  text-align: center;
+
+  div {
+    display: block;
+    width: 150px;
+    height:150px;
+    margin:auto;
+  }
+  svg > path {
+    fill: $mid-blue;
+  }
+}
+
+.banner-right {
   float: right;
   display: flex;
   align-items: baseline;
-  a{
+  a {
     margin-right: 7px;
     display: block;
+    svg > path {
+      fill: #ffffff;
+    }
   }
 
-  a:last-child{
+  a:last-child {
     margin-left: 10px;
   }
 }
@@ -93,29 +111,29 @@
 
 .footer-col-1 {
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+    width: calc(50% - (#{$spacing-unit} / 2));
   }
 
   .footer-col-3 {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
@@ -123,11 +141,9 @@
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
-
-
 
 /**
  * Page content
@@ -158,8 +174,6 @@
   display: block;
   @include relative-font-size(1.5);
 }
-
-
 
 /**
  * Posts

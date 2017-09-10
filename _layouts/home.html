@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
 {% include head.html %}
 
@@ -10,28 +10,32 @@
 
 <main class="page-content" aria-label="Content">
   <div class="wrapper">
-    <div class="home">
-      
-      <h1 class="page-heading">Posts</h1>
-
-      {{ content }}
-
-      <ul class="post-list">
-        {% for post in site.posts %}
-        <li>
-          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-          <h2>
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h2>
-        </li>
-        {% endfor %}
-      </ul>
-
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-4 logo-col">{% include tile-code.html %}</div>
+        <div class="col-xs-4 logo-col">{% include tile-code.html %}</div>
+        <div class="col-xs-4 logo-col">{% include tile-code.html %} </div>
+      </div>
     </div>
+    <h1 class="page-heading">Posts</h1>
+
+    {{ content }}
+
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
   </div>
 </main>
 

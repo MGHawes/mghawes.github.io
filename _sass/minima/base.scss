@@ -188,27 +188,19 @@ pre {
 /**
  * Icons
  */
-.icon > svg {
-  display: inline-block;
-  vertical-align: middle;
-
-  path {
-    fill: $dark-blue;
-  }
-}
-
-.invert-icon {
+.icon {
   a {
     display: block;
   }
   svg {
-    @extend .icon;
-
+    display: inline-block;
+    vertical-align: middle;
     path {
-      fill: #ffffff;
+      fill: $dark-blue;
     }
   }
 }
+
   .social-media-list {
     .icon {
       padding-right: 5px;
@@ -218,4 +210,5 @@ pre {
       padding-top: 5px;
     }
   }
+
 
