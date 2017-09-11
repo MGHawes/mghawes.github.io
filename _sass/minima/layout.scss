@@ -11,6 +11,13 @@
   }
 }
 
+.center-block {
+  display: block;
+  margin:auto;
+  position: relative;
+  z-index: 20;
+}
+
 .splash-banner {
   min-height: 300px;
   display: flex;
@@ -22,7 +29,7 @@
 .intro-line {
   text-align: center;
   margin: auto;
-  color: #a1a1a1;
+  color: $light-grey-text;
   font-size: 30px;
   font-weight: 100;
 }
@@ -40,19 +47,31 @@
   float: right;
 }
 
-.logo-col {
+.tile-frame {
+  margin:auto;
+  width: 120px;
   text-align: center;
-
-  div {
-    display: block;
-    width: 150px;
-    height:150px;
-    margin:auto;
-  }
   svg > path {
     fill: $mid-blue;
   }
+
+  p {
+    color: #ffffff;
+    visibility: hidden;
+    transform: translate(0,-30px);
+    transition: all 0.5s ease-out;
+    z-index: 10;
+    font-size: 20px;
+  }
 }
+
+.tile-frame:hover > p {
+  color: $light-grey-text;
+  visibility: visible;
+  transform: translate(0,0);
+}
+
+
 
 .banner-right {
   float: right;
