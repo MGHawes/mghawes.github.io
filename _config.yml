@@ -25,7 +25,7 @@ strava_username:
 markdown: kramdown
 plugins:
   - jekyll-feed
-
+linkedin: "https://www.linkedin.com/in/matthew-hawes-oxford"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
