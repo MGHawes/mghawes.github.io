@@ -5,7 +5,13 @@
 
   <body>
 
+    {% capture img-name %}{{ layout.img }}{% endcapture %}
+    {% capture y-pos %}{{ layout.y-pos }}{% endcapture %}
+    {% capture x-pos %}{{ layout.x-pos }}{% endcapture %}
     {% include header.html %}
+    {% if layout.img %}
+      {% include banner-image.html img=img-name y-position=y-pos x-position=x-pos %}
+    {% endif %}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">

@@ -6,15 +6,16 @@
 <body>
 
 {% include header.html %}
+{% include banner-image.html img='l-angle-bens.jpg' y-position='45%' x-position='center' %}
 {% include splash-banner.html %}
 
 <main class="page-content" aria-label="Content">
   <div class="wrapper">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-6 col-sm-4 logo-col">{% include tile-code.html %}</div>
-        <div class="col-xs-6 col-sm-4 logo-col">{% include tile-climbing.html %}</div>
-        <div class="col-xs-6 col-sm-4 logo-col">{% include tile-physics.html %}</div>
+        <div class="col-xs-12 col-sm-4 logo-col">{% include tile-code.html %}</div>
+        <div class="col-xs-12 col-sm-4 logo-col">{% include tile-physics.html %}</div>
+        <div class="col-xs-12 col-sm-4 logo-col">{% include tile-climbing.html %}</div>
       </div>
     </div>
     <h1 class="page-heading">All Posts</h1>

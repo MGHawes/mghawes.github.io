@@ -5,6 +5,8 @@ $dark-blue: #0C8BEB;
 $darkest-blue: #00bcd4;
 $light-grey-text: #a1a1a1;
 
+$tile-width: 150px;
+
 @charset "utf-8";
 
 // Define defaults for each variable.
@@ -21,7 +23,7 @@ $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
 $brand-color:      #2a7ae2 !default;
 
-$grey-color-light: lighten($dark-blue, 40%) !default;
+$grey-color-light: #dfdfdf;
 
 
 // Width of the content area
@@ -30,3 +32,9 @@ $content-width:    800px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
+$banner-height: 300px;
+
+
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;

@@ -19,11 +19,35 @@
 }
 
 .splash-banner {
-  min-height: 300px;
+  min-height: $banner-height/2;
   display: flex;
   position: relative;
   overflow: hidden;
   z-index: 0;
+}
+
+@media (min-width: $sm) {
+  .splash-banner {
+    min-height: $banner-height;
+  }
+}
+
+@media (min-width: $sm) {
+  .banner-image {
+    background-size: 121%;
+  }
+}
+
+@media (min-width: $md) {
+  .banner-image {
+    background-size: 93%;
+  }
+}
+
+@media (min-width: $lg) {
+  .banner-image {
+    background-size: 75%;
+  }
 }
 
 .intro-line {
@@ -49,10 +73,16 @@
 
 .tile-frame {
   margin:auto;
-  width: 120px;
+  width: $tile-width;
   text-align: center;
-  svg > path {
-    fill: $mid-blue;
+  svg > path,rect {
+    stroke:$mid-blue;
+    fill:none;
+  }
+
+  svg {
+    width: $tile-width;
+    height: $tile-width;
   }
 
   p {
@@ -68,10 +98,20 @@
 .tile-frame:hover > p {
   color: $light-grey-text;
   visibility: visible;
-  transform: translate(0,0);
+  transform: translate(0, 0);
 }
 
+@media (max-width: $sm) {
+  .tile-frame > p {
+    color: $light-grey-text;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+}
 
+.logo-col {
+  margin-bottom: 30px;
+}
 
 .banner-right {
   float: right;
@@ -90,6 +130,8 @@
   }
 }
 
+
+
 .site-title {
   @include banner-item();
   font-size: 40px;
@@ -102,6 +144,10 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+}
+
+.banner-image {
+  background-size: 100%;;
 }
 
 .footer-heading {
